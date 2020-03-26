@@ -7,13 +7,13 @@ import (
 type vertex struct { // A struct is a collection of fields.
   X int
   Y int
-  Q ,Z int // the declaration can also be done like this.
 }
 
 func main() {
 
   i , j := 10,11
-
+  primes := [6]int{2, 3, 5, 7, 11, 13}
+	fmt.Println(primes)
   point := &i
 
   fmt.Println(*point)
@@ -26,13 +26,22 @@ func main() {
 
   // struct testing :
   fmt.Println("Struct Testing")
-  v := vertex{57, 3 }
-  v.X = 63
+  v := vertex{ 57481 , 3 }
+  v.X = 635261
   fmt.Println(v.X)
   // pointers can also be made to structs
 
   point2 := &v
   point2.X = 404
-  fmt.Println("point2 referenced value : ",v.X)
+  fmt.Println(v.X)
+
+  fmt.Println(primes)
+  // can declare and initialize the array at any poitn in the program 
+  var array [3]string
+  array[0] = "working"
+  array[1] = "on"
+  array[2] = "it"
+
+  fmt.Println(array)
 
 }
