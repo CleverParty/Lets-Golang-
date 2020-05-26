@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	doc, _ := prose.NewDocument("This is a sentence.")
+	doc, _ := prose.NewDocument("go is an interesting language:.")
 	for _, token := range doc.Tokens() {
 		fmt.Println(token.Text)
 		//Tokenization - works good
