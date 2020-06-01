@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"math/rand"
 )
 
@@ -22,6 +23,12 @@ func main() {
 		fmt.Printf("a[%d] = %d\n", index, value)
 		if index == 2 {
 			avg = sumVal / 3
+			for index, innerValue := range a {
+				storeIndex := avg - innerValue
+				f := float64(storeIndex)
+				dif := math.Abs(f) //value - innerValue)
+				fmt.Printf("the differences from mean are %d index and value : %d \n", index, dif)
+			}
 		}
 	}
 	fmt.Println(avg)
