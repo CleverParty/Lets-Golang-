@@ -6,6 +6,10 @@ import (
 	"math/rand"
 )
 
+func ratings(x int, y int) int {
+	return x + y
+}
+
 func main() {
 
 	a := [3]int{1, 2, 3} // first method
@@ -22,16 +26,17 @@ func main() {
 		sumVal += value
 		fmt.Printf("a[%d] = %d\n", index, value)
 		if index == 2 {
+			fmt.Println(sumVal)
 			avg = sumVal / 3
 			for index, innerValue := range a {
-				storeIndex := avg - innerValue
+				fmt.Println((2 * avg) / 3)
+				storeIndex := (2*avg)/3 - innerValue
 				f := float64(storeIndex)
-				dif := math.Abs(f) //value - innerValue)
+				dif := math.Abs(f) //value - innerValue
 				fmt.Printf("the differences from mean are %d index and value : %d \n", index, dif)
 			}
 		}
 	}
-	fmt.Println(avg)
 	// for i := 0; i < 10; i++ {
 	//  	a[i] = rand.Intn(100)
 	//	    fmt.Println(a[i])
