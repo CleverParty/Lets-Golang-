@@ -1,7 +1,6 @@
 # Lets-Golang-
 
-go simply works,
-lets go with it,
+go simply works, so lets go with it.
               -friendly gopher
 
 
