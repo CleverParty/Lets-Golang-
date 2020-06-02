@@ -19,3 +19,21 @@ np.random.seed(10)
 count = rockPaperScissors.fictitious_play(iterations = iterations)
 for i, j in count:
     print(i, j)
+
+
+# matching pennies : 
+print("Matching pennies results below\n")
+B = np.array([[1, -1], [-1, 1]]) # row player wins if both heads and coloumn player wins when both are tails
+pennies = nash.Game(B)
+print(pennies)
+
+# prisoner's dilemma : 
+print("Modified prisoner's dilemma\n")
+C = np.array([[3, 0], [5, 1]])
+D = np.array([[1,3], [0,0]])
+dilemma = nash.Game(C,D)
+dilemmaOne = nash.Game(A,B) # 
+print(dilemma)
+print("\n")
+print(" \/ Modified equilibrium for rock paper scissors \/ \n")
+print(dilemmaOne)
