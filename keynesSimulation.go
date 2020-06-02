@@ -15,7 +15,8 @@ func main() {
 	a := [3]int{1, 2, 3} // first method
 	var b [3]string      // second method of declaring the arrays
 	fmt.Println(a)
-	var avg, sumVal int
+	var avg, sumVal, storeDif int
+	var y int
 	a[0] = rand.Intn(100)
 	a[1] = rand.Intn(100)
 	a[2] = rand.Intn(100)
@@ -28,11 +29,18 @@ func main() {
 		if index == 2 {
 			fmt.Println(sumVal)
 			avg = sumVal / 3
-			for index, innerValue := range a {
+			for index, innerValue := range a {     // this loop can be added to a function -- > future enhancement
 				fmt.Println((2 * avg) / 3)
 				storeIndex := (2*avg)/3 - innerValue
 				f := float64(storeIndex)
 				dif := math.Abs(f) //value - innerValue
+				y = int(dif)
+				storeDif = y
+				if  y <= storeDif {
+					storeDif = y
+					fmt.Printf("lowest difference := %d ", value)
+				}
+				storeDif = int(dif)
 				fmt.Printf("the differences from mean are %d index and value : %d \n", index, dif)
 			}
 		}
