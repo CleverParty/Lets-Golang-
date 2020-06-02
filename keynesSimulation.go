@@ -16,7 +16,7 @@ func main() {
 	var b [3]string      // second method of declaring the arrays
 	fmt.Println(a)
 	var avg, sumVal, storeDif int
-	var y int
+	var y, j int
 	a[0] = rand.Intn(100)
 	a[1] = rand.Intn(100)
 	a[2] = rand.Intn(100)
@@ -29,25 +29,26 @@ func main() {
 		if index == 2 {
 			fmt.Println(sumVal)
 			avg = sumVal / 3
-			for index, innerValue := range a {     // this loop can be added to a function -- > future enhancement
+			for index, innerValue := range a { // this loop can be added to a function -- > future enhancement
 				fmt.Println((2 * avg) / 3)
 				storeIndex := (2*avg)/3 - innerValue
 				f := float64(storeIndex)
 				dif := math.Abs(f) //value - innerValue
 				y = int(dif)
 				storeDif = y
-				if  y <= storeDif {
+				if y <= storeDif {
 					storeDif = y
-					fmt.Printf("lowest difference := %d ", value)
+					fmt.Printf("lowest difference := %d\n", value)
+					j = index
 				}
 				storeDif = int(dif)
-				fmt.Printf("the differences from mean are %d index and value : %d \n", index, dif)
+				fmt.Printf("the differences for each rating[%d] from 2/3*mean = %d \n", j, storeDif)
 			}
 		}
 	}
+	fmt.Printf("The contestant with closest value picked is := %d \n", j)
 	// for i := 0; i < 10; i++ {
 	//  	a[i] = rand.Intn(100)
 	//	    fmt.Println(a[i])
 	// }
-	fmt.Println("The ratings of the contestants %v:", a)
 }
