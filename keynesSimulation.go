@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 	"math/rand"
+	"time"
 )
 
 func ratings(x int, y int) int {
@@ -23,6 +24,7 @@ func main() {
 	b[0] = "India"
 	b[1] = "Canada"
 	b[2] = "Japan"
+	start := time.Now()
 	for index, value := range a {
 		sumVal += value
 		fmt.Printf("a[%d] = %d\n", index, value)
@@ -43,12 +45,14 @@ func main() {
 				}
 				storeDif = int(dif)
 				fmt.Printf("the differences for each rating[%d] from 2/3*mean = %d \n", j, storeDif)
+				fmt.Print("\nthe winner is player no: %d \n", index)
 			}
 		}
 	}
+	fmt.Println(time.Since(start))
 	fmt.Printf("The contestant with closest value picked is := %d \n", j)
 	// for i := 0; i < 10; i++ {
 	//  	a[i] = rand.Intn(100)
 	//	    fmt.Println(a[i])
-	// }
+	// }python3 -m venv examplep
 }
