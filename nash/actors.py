@@ -22,7 +22,6 @@ print("\nWith random seed generation for each actors (RPS) :\n")
 for i, j in count:
     print(i, j)
 
-
 # matching pennies : 
 print("Matching pennies results below\n")
 B = np.array([[1, -1], [-1, 1]]) # row player wins if both heads and coloumn player wins when both are tails
@@ -34,8 +33,9 @@ print("Modified prisoner's dilemma\n")
 C = np.array([[3, 0], [5, 1]])
 D = np.array([[1,3], [0,0]])
 dilemma = nash.Game(C,D)
-dilemmaOne = nash.Game(A,B) # 
+dilemmaOne = nash.Game(A,C) # different combinations for different group of players
 print(dilemma)
 print("\n")
 print(" \/ Modified equilibrium for rock paper scissors \/ \n")
 print(dilemmaOne)
+print("test git structure")
