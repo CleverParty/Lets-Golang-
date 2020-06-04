@@ -11,12 +11,14 @@ sigma_c = [0, 1, 0]
 print(rockPaperScissors[sigma_r, sigma_c])
 # calculating nash equilibria 
 equilibrium = rockPaperScissors.support_enumeration()
+print("\nThe nash equilibrium values represented with payoffs :\n")
 print(list(equilibrium))
 
 # with random seed 
 iterations = 100
 np.random.seed(10)
 count = rockPaperScissors.fictitious_play(iterations = iterations)
+print("\nWith random seed generation for each actors (RPS) :\n")
 for i, j in count:
     print(i, j)
 
