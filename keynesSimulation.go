@@ -11,6 +11,11 @@ func ratings(x int, y int) int {
 	return x + y
 }
 
+func process(a int, b int) int {
+	ele := a + b
+	return ele
+}
+
 func main() {
 
 	a := [3]int{1, 2, 3} // first method
@@ -43,6 +48,8 @@ func main() {
 					fmt.Printf("lowest difference := %d\n", value)
 					j = index
 				}
+				val := process(storeIndex, storeDif)
+				fmt.Println("[val] value is :", val)
 				storeDif = int(dif)
 				fmt.Printf("the differences for each rating[%d] from 2/3*mean = %d \n", j, storeDif)
 				fmt.Printf("\nthe winner is player no: %d \n", index)
