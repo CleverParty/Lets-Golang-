@@ -2,6 +2,8 @@ package main
 
 import (
   "fmt"
+
+  "github.com/skratchdot/open-golang/open"
 )
 
 type Node struct{
@@ -11,17 +13,18 @@ type Node struct{
 }
 
 
+
 func main() {
   one := &Node{
     Value : 10 ,
   }
-
+  // var val ,start , err int  = 1 , 2 ,3
   two := &Node{
     Value : 2 ,
   }
   one.right = two
-
-
+  open.Run("https://google.com/")
+  open.Start("https://google.com")
   printNode(one)
 }
 
