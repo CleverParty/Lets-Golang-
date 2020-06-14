@@ -15,7 +15,9 @@ try:
         print("position is :={}".format(positionStr))
 except KeyboardInterrupt:
      print('\nDone.')
-
+screenWidth, screenHeight = pyautogui.size() # Get the size of the primary monitor.
+currentMouseX, currentMouseY = pyautogui.position()
+pyautogui.moveTo(100, 150)
 client = discord.Client()
 token = sys.argv[1]
 
