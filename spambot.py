@@ -11,7 +11,7 @@ print('Press Ctrl-C to quit.')
 try:
     while True:
         # x, y = pyautogui.position()
-        if(pyautogui.onScreen(456, 783)):
+        if(pyautogui.onScreen(614, 783)):
             pyautogui.screenshot('foo.png')
             pyautogui.click(x=614, y=782, clicks = 2, interval=1 , button='left')
             # positionStr = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4)
