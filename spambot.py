@@ -14,7 +14,7 @@ try:
         pyautogui.screenshot('foo.png')
         pyautogui.click(x=614, y=782, clicks = 2, interval=1 , button='left')
         # positionStr = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4)
-        print("position is :={}".format(positionStr))
+        # print("position is :={}".format(positionStr))
         # test command pyautogui.prompt('This lets the user type in a string and press OK.')
         text = "test here"
         pyautogui.typewrite(text, 1)
@@ -30,7 +30,7 @@ token = sys.argv[1]
 
 text = "test here"
 # text field input 
-pyautogui.typewrite(text, 1)
+# pag.typewrite(text, 1)
 # clicks function
 # pag.click(x, y, clicks, interval, button)
 # clicks key
