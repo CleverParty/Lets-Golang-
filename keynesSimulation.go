@@ -54,6 +54,7 @@ func main() {
 				fmt.Printf("the differences for each rating[%d] from 2/3*mean = %d \n", j, storeDif)
 				fmt.Printf("\nthe winner is player no: %d \n", index)
 			}
+			fmt.Println(storeDif)
 		}
 	}
 	total := time.Since(begin)
