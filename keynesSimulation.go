@@ -25,7 +25,7 @@ func main() {
 	var y, j int
 	a[0] = rand.Intn(100)
 	a[1] = rand.Intn(100)
-	a[2] = rand.Intn(100)
+	a[2] = rand.Intn(10000)
 	b[0] = "India"
 	b[1] = "Canada"
 	b[2] = "Japan"
