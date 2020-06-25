@@ -1,13 +1,10 @@
 language: go
 go:
-  - 1.11.x
-  - master
+  - 1.x
 os:
-  - linux
+  - linuxg
   - osx
-dist: trusty
-sudo: true
-install: true
+before_install:
+  - curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
 script:
-  - env GO111MODULE=on go build
-  - env GO111MODULE=on go test
+  - make lint test
