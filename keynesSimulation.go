@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"math"
-	"math/rand"
 	"time"
 )
 
@@ -18,42 +17,32 @@ func process(a int, b int) int {
 
 func main() {
 
-	a := [3]int{1, 2, 3} // first method
-	var b [3]string      // second method of declaring the arrays
-	fmt.Println(a)
 	var avg, sumVal, storeDif int
 	var y, j int
-	a[0] = rand.Intn(100)
-	a[1] = rand.Intn(100)
-	a[2] = rand.Intn(10000)
-	b[0] = "India"
-	b[1] = "Canada"
-	b[2] = "Japan"
 	begin := time.Now()
-	for index, value := range a {
+	players := [3]int{1, 6, 3}
+	for index, value := range players {
 		sumVal += value
 		fmt.Printf("a[%d] = %d\n", index, value)
-		if index == 2 {
-			fmt.Println(sumVal)
-			avg = sumVal / 3
-			for index, innerValue := range a { // this loop can be added to a function -- > future enhancement
-				fmt.Println((2 * avg) / 3)
-				storeIndex := (2*avg)/3 - innerValue
-				f := float64(storeIndex)
-				dif := math.Abs(f) //value - innerValue
-				y = int(dif)
+
+		avg = sumVal / 3
+		for index, innerValue := range players { // this loop can be added to a function -- > future enhancement
+			storeIndex := (2*avg)/3 - innerValue
+			f := float64(storeIndex)
+			dif := math.Abs(f) //value - innerValue
+			y = int(dif)
+			storeDif = y
+			if y <= storeDif {
 				storeDif = y
-				if y <= storeDif {
-					storeDif = y
-					fmt.Printf("lowest difference := %d\n", value)
-					j = index
-				}
-				val := process(storeIndex, storeDif)
-				fmt.Println("[val] value is :", val)
-				storeDif = int(dif)
-				fmt.Printf("the differences for each rating[%d] from 2/3*mean = %d \n", j, storeDif)
-				fmt.Printf("\nthe winner is player no: %d \n", index)
+				fmt.Printf("2/3*mean value is : %d\n", ((2 * avg) / 3))
+				fmt.Printf("lowest difference := %d\n", value)
+				j = index
 			}
+			val := process(storeIndex, storeDif)
+			fmt.Println("[val] value is :", val)
+			storeDif = int(dif)
+			fmt.Printf("the differences for each rating[%d] from 2/3*mean = %d \n", j, storeDif)
+			fmt.Printf("\nthe winner is player no: %d \n", index)
 			fmt.Println(storeDif)
 		}
 	}
