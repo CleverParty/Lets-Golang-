@@ -3,7 +3,7 @@ GOBUILD=$(GOCMD) build
 GOCLEAN=$(GOCMD) clean
 GOTEST=$(GOCMD) test
 GOGET=$(GOCMD) get
-BINARY_NAME=Lets-Golang-
+BINARY_NAME=simple_service
 LINTER=golangci-lint
 
 all: test build
@@ -15,4 +15,4 @@ build:
       $(GOBUILD) -o $(BINARY_NAME) -v
 
 lint:
-      $(LINT
+      $(LINTER) run
