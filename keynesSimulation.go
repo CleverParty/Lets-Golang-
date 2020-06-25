@@ -15,6 +15,10 @@ func process(a int, b int) int {
 	return ele
 }
 
+func run() string {
+	return "CI testing in progress"
+}
+
 func main() {
 
 	var avg, sumVal, storeDif int
