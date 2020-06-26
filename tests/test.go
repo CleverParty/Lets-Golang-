@@ -23,7 +23,8 @@ func main() {
   myImage.Pix[1] = 0 // 1st pixel green
   myImage.Pix[2] = 0 // 1st pixel blue
   myImage.Pix[3] = 255 // 1st pixel alpha
-  outputFile, err := os.Create("test.png") // storeing encoded image in a .png file
+  outputFile, err := os.Create("works" +
+    ".png") // storeing encoded image in a .png file
   if err != nil {
     fmt.Println("error occured")
   }
@@ -31,7 +32,7 @@ func main() {
 
   outputFile.Close()
 
-    one := &Node{
+  one := &Node{
     Value : 10 ,
     payload : 0 ,
   }
