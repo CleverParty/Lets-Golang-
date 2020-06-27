@@ -1,12 +1,8 @@
-LINTER=golangci-lint
-
-all: test build
-
-test:
-    go test keynesSimulation.go
+running:
+	echo "Running golang files"
 
 build:
-    go build keynesSimulation.go
+	go build -o bin/main keynesSimulation.go
 
-lint:
-	$(LINTER) run
+run:
+	go run keynesSimulation.gog
