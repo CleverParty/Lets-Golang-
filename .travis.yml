@@ -1,7 +1,18 @@
 language: go
+<<<<<<< HEAD
 go:
   - 1.x
 os:
   - osx
 script:
   - make build
+=======
+
+go: 
+ - 1.x
+ - release
+ - tip
+ 
+script:
+ - go test -v ./...
+>>>>>>> 812e7aebcb5dc38963d4bd3da6d186a730dc334b
