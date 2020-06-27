@@ -1,8 +1,8 @@
-running:
+project:
 	echo "Running golang files"
 
 build:
 	go build -o bin/main keynesSimulation.go
 
 run:
-	go run keynesSimulation.gog
+	go run keynesSimulation.go
