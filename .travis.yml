@@ -4,4 +4,6 @@ go:
 os:
   - osx
 script:
+  - make project
   - make build
+  - make run

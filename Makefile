@@ -1,4 +1,4 @@
-running:
+project:
 	echo "Running golang files"
 
 build:
