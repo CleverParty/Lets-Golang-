@@ -3,6 +3,7 @@ project:
 
 build:
 	# go build -o bin/main keynesSimulation.go
+	go get "github.com/timpalpant/go-iex"
 	go build FinData/iex_config.go
 
 run:
