@@ -3,7 +3,7 @@ project:
 
 build:
 	go build -o bin/main keynesSimulation.go
-	go build -o bin/main FinData/iex_config.go
+	go build -o FinData/iex_config.go
 
 run:
 	go run keynesSimulation.go
