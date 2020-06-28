@@ -15,8 +15,8 @@ import (
 func main() {
 	client := iex.NewClient(&http.Client{})
 
-	// Get historical data dumps available for 2016-12-12.
-	histData, err := client.GetHIST(time.Date(2016, time.December, 12, 0, 0, 0, 0, time.UTC))
+	// Get historical data dumps available for 2019-12-12.
+	histData, err := client.GetHIST(time.Date(2019, time.December, 12, 0, 0, 0, 0, time.UTC))
 	if err != nil {
 		panic(err)
 	} else if len(histData) == 0 {
