@@ -1,10 +1,10 @@
 project:
-	echo "Running golang files"
+	printf "Running golang files"
 
 build:
 	# go build -o bin/main keynesSimulation.go
 	printf "Build stage has begun :\n" # printf seems more functional in printing command line statements
-	go get "github.com/timpalpant/go-iex"
+	# go get "github.com/timpalpant/go-iex"
 	# go build FinData/iex_config.go
 	go build keynesSimulation.go
 	go build FinData/SMA_go.go
