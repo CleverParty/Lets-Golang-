@@ -16,7 +16,7 @@ func process(a int, b int) int {
 }
 
 func run() string {
-	return "CI testing in progress"
+	return "CI pipeline works testing in progress, this function execution will be treated as the canary in the coal mine."
 }
 
 func main() {
