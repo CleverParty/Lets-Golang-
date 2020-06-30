@@ -11,7 +11,7 @@ type vertex struct { // A struct is a collection of fields.
 
 func fact(num int) int {
 	if num > 1 {
-		return num * fact(num-1)
+		return num * fact(num-1) // fact test fails but main works
 	} else {
 		return 1
 	}
