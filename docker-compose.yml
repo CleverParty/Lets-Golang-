@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  lets-golang-:
+    image: lets-golang-
+    build: .
+    ports:
+      - 3000
