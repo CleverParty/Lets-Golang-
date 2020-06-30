@@ -10,17 +10,12 @@ import (
 )
 
 func main() {
-	a := [3]int{1, 2, 3} // first method
-	var b [3]string      // second method of declaring the arrays
-	fmt.Println(a)
+	a := [3]int{1, 2, 3} // edits
 	var avg, sumVal, storeDif int
 	var y, j int
 	a[0] = rand.Intn(100)
 	a[1] = rand.Intn(100)
 	a[2] = rand.Intn(100)
-	b[0] = "India"
-	b[1] = "Canada"
-	b[2] = "Japan"
 	router := gin.Default()
 	// Set a lower memory limit for multipart forms (default is 32 MiB)
 	router.MaxMultipartMemory = 8 << 20 // 8 MiB
@@ -29,11 +24,11 @@ func main() {
 		file, _ := c.FormFile("file")
 		log.Println(file.Filename)
 
-		// Upload the file to specific dst.
-		dst := "/Users/shanmukhasurapuraju/Documents"
+		// Upload the file to specific destination folder.
+		dst := "/Users/user/Documents"
 		c.SaveUploadedFile(file, dst)
 
 		c.String(http.StatusOK, fmt.Sprintf("'%s' uploaded!", file.Filename))
 	})
-	router.Run(":3003")
+	router.Run(":3008")
 }
