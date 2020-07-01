@@ -6,7 +6,8 @@ RUN apk add --no-cache git
 RUN go get -d -v ./...
 RUN go install -v ./...
 
-#final stage
+#final app stage
+# test ci comment
 FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 COPY --from=builder /go/bin/app /app
