@@ -10,7 +10,6 @@ build:
 	go build FinData/SMA_go.go
 
 run:
-	# go run keynesSimulation.go
 	# go run FinData/iex_config.go
 	printf "Run stage has begin :\n"
 	go run keynesSimulation.go
