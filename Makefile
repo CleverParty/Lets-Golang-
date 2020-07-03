@@ -7,10 +7,10 @@ build:
 	# go get "github.com/timpalpant/go-iex"
 	# go build FinData/iex_config.go
 	go build keynesSimulation.go
-	go build FinData/SMA_go.go
+	go build FinData/pkg/SMA_go.go
 
 run:
 	# go run FinData/iex_config.go
 	printf "Run stage has begin :\n"
 	go run keynesSimulation.go
-	go run FinData/SMA_go.go
+	go run FinData/pkg/SMA_go.go
