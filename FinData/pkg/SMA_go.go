@@ -37,10 +37,8 @@ func main() {
 
 	fmt.Println(primes)
 	// can declare and initialize the array at any poitn in the program
-	var array [3]string
-	array[0] = "working"
-	array[1] = "on"
-	array[2] = "it"
+	var array [1]string
+	array[0] = "canary test is working"
 
 	fmt.Println(array)
 
