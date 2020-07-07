@@ -13,7 +13,7 @@ build:
 
 run:
 	printf "Run stage has begin :\n"
-	go run FinData/iex_config.go
+	# go run FinData/iex_config.go
 	printf "^^^Build Completed^^^\n"
-	# go run keynesSimulation.go
+	go run keynesSimulation.go
 	# go run FinData/pkg/SMA_go.go
