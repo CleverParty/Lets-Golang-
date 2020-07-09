@@ -8,8 +8,8 @@ build:
 	go get "github.com/timpalpant/go-iex/iextp/tops"
 	go build FinData/iex_config.go
 	go build keynesSimulation.go
-	go build FinData/pkg/SMA_go.go
-	go test  FinData/pkg/SMA_go_test.go
+	# go build FinData/pkg/SMA_go.go
+	# go test  FinData/pkg/SMA_go_test.go
 
 run:
 	printf "Run stage has begin :\n"
