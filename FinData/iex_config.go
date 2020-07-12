@@ -15,6 +15,17 @@ import (
 func main() {
 	client := iex.NewClient(&http.Client{})
 
+	quotes, err := client.GetTOPS([]string{"AAPL", "SPY"})
+	if err != nil {
+    	panic(err)
+	}
+
+  	for _, quote := range quotes {
+    	fmt.Printf("%v: bid $%.02f (%v shares), ask $%.02f (%v shares) [as of %v]\n",
+        quote.Symbol, quote.BidPrice, quote.BidSize,
+        quote.AskPrice, quote.AskSize, quote.LastUpdated)
+  	}
+
 	// Get historical data dumps available for 2019-12-12.
 	histData, err := client.GetHIST(time.Date(2019, time.December, 12, 0, 0, 0, 0, time.UTC))
 	if err != nil {
