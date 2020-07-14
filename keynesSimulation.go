@@ -16,7 +16,7 @@ func process(a int, b int) int {
 }
 
 func run() string {
-	return "CI pipeline works testing in progress, this function execution will be treated as the canary in the coal mine."
+	return "This function execution will be treated as the canary in the coal mine."
 }
 
 func main() {
@@ -56,5 +56,5 @@ func main() {
 	// for i := 0; i < 10; i++ {
 	//  	a[i] = rand.Intn(100)
 	//	    fmt.Println(a[i])
-	// }python3 -m venv examplep
+	// }python3 -m venv
 }
