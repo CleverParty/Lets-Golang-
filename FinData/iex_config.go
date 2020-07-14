@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/timpalpant/go-iex"
+	"github.com/timpalpant/go-iex/iextp/tops"
 )
 
 func main() {
