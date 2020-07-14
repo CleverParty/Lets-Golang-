@@ -1,5 +1,5 @@
 project:
-	printf "Running golang files"
+	printf "Runs checks"
 
 build:
 	# go build -o bin/main keynesSimulation.go
@@ -9,7 +9,7 @@ build:
 	go build FinData/iex_config.go
 	go build keynesSimulation.go
 	# go build FinData/pkg/SMA_go.go
-	# go test  FinData/pkg/SMA_go_test.go
+	go test  FinData/pkg/SMA_go_test.go
 
 run:
 	printf "Run stage has begin :\n"
