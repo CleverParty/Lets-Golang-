@@ -10,9 +10,6 @@ import (
 	"github.com/dustin/go-humanize"
 )
 
-// WriteCounter counts the number of bytes written to it. By implementing the Write method,
-// it is of the io.Writer interface and we can pass this into io.TeeReader()
-// Every write to this writer, will print the progress of the file write.
 type WriteCounter struct {
 	Total uint64
 }
@@ -38,7 +35,7 @@ func (wc WriteCounter) PrintProgress() {
 func main() {
 	fmt.Println("Download Started")
 
-	url := "https://q5.wewon.to/m1/2007/Sunshine.2007.mp4?valid=Ykjnz2YuoUuEnDQMIJsLyQ&t=1583719280"
+	url := "www.test.com/download.mp4"
 	filename := "sunshine2.mp4"
 	err := DownloadFile(url, filename)
 	if err != nil {

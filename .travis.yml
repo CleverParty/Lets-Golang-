@@ -1,0 +1,9 @@
+language: go
+go:
+  - 1.x
+os:
+  - osx
+script:
+  - make project
+  - make build
+  - make run
