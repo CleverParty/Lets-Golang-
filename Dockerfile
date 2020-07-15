@@ -12,5 +12,6 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 COPY --from=builder /go/bin/app /app
 ENTRYPOINT ./app
+RUN go run -v ./...
 LABEL Name=lets-golang- Version=0.0.1
-EXPOSE 3000
+EXPOSE 3007
