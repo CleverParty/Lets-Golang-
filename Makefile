@@ -10,7 +10,7 @@ build:
 	# go build FinData/iex_config.go
 	go build keynesSimulation.go
 	go build poemProcess.go
-	# go build FinData/pkg/SMA_go.go
+	go build FinData/pkg/SMA_go.go
 	go test  FinData/pkg/SMA_go_test.go
 
 run:
@@ -19,4 +19,4 @@ run:
 	printf "^^^Build Completed^^^\n"
 	go run poemProcess.go
 	# go run keynesSimulation.go
-	# go run FinData/pkg/SMA_go.go
+	go run FinData/pkg/SMA_go.go

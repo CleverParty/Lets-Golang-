@@ -3,6 +3,7 @@ go:
   - 1.x
 os:
   - osx
+  - linux
 script:
   - make project
   - make build
