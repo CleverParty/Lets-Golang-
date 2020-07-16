@@ -12,6 +12,10 @@ func main() {
 	for index, value := range rng {
 		fmt.Printf("a[%d] = %d\n", index, value)
 	}
+	valueFunc := func() {
+		fmt.Println("Anonymous func generated :")
+	}
+	 valueFunc()
 	doc, _ := prose.NewDocument("go is an interesting language:.")
 	for _, token := range doc.Tokens() {
 		fmt.Println(token.Text)
