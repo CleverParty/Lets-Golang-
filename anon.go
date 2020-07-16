@@ -6,11 +6,16 @@ import (
 
 func anonFunc() {
 	fmt.Println("the function which accepts other functions as arguements has been entered")
+	// secondClass := func() {}
 
 }
 
+func secondClass() {
+	fmt.Println("global status check")
+}
+
 func testerFunc(a func()) {
-	// Edit this to test out functions within the environment
+
 	fmt.Println("the Tester function has been entered")
 }
 
@@ -25,4 +30,5 @@ func main() {
 	}
 	anonTest()
 	fmt.Println("the value returned by first class func is: ", firstClass(12, 34))
+	secondClass()
 }
