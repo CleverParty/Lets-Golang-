@@ -29,6 +29,6 @@ jobs:
         go get "gopkg.in/jdkato/prose.v2"
 
     - name: Build
-      run: go build -v .
+      run: go build poemProcess.go
 
   
