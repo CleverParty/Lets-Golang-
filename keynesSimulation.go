@@ -25,6 +25,7 @@ func main() {
 	var y, j int
 	begin := time.Now()
 	players := [3]int{1, 6, 3}
+	fmt.Println(process(23, 78))
 	for index, value := range players {
 		sumVal += value
 		fmt.Printf("a[%d] = %d\n", index, value)
