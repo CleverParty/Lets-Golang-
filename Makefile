@@ -19,4 +19,4 @@ run:
 	printf "^^^Build Completed^^^\n"
 	# go run poemProcess.go
 	go run keynesSimulation.go
-	# go run FinData/pkg/SMA_go.go
+	go run FinData/pkg/SMA_go.go
