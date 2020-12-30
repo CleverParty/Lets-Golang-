@@ -29,7 +29,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
+	fmt.Println("alpaca api end points are to be updated")
 	fmt.Println(*acct)
 }
 
