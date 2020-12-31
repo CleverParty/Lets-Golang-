@@ -1,13 +1,16 @@
 package main
+
 import (
 	"fmt"
+	"os"
+
 	"github.com/alpacahq/alpaca-trade-api-go/alpaca"
 	"github.com/alpacahq/alpaca-trade-api-go/common"
-	"os"
 )
-func initAlpacaCreds(){
-	valueToBeAsserted = "test"
-	fmt.Println("Value is :",*valueToBeAsserted)
+
+func initAlpacaCreds() {
+	var valueToBeAsserted = "test"
+	fmt.Println("Value is :", valueToBeAsserted)
 	alpaca.SetBaseUrl("https://paper-api.alpaca.markets")
 }
 
@@ -26,9 +29,10 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
+	fmt.Println("alpaca api end points are to be updated")
 	fmt.Println(*acct)
 }
+
 // windows file modification:
 // warning: LF will be replaced by CRLF in test.go.
 // The file will have its original line endings in your working directory
