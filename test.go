@@ -2,14 +2,14 @@ package main
 
 import (
 	"fmt"
-	"github.com/alpacahq/alpaca-trade-api-go/alpaca"
-	"github.com/alpacahq/alpaca-trade-api-go/common"
 	"testing"
+
+	"github.com/alpacahq/alpaca-trade-api-go/alpaca"
 )
 
-func init(){
+func init() {
 	valueToBePrinted = "test"
-	fmt.Println("Value is :",*valueToBePrinted)
+	fmt.Println("Value is :", *valueToBePrinted)
 	alpaca.SetBaseUrl("https://paper-api.alpaca.markets")
 }
 
